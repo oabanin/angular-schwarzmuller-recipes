@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgForOf, NgOptimizedImage} from "@angular/common";
 import {Recipe} from "../../recipe.model";
+import {RecipeService} from "../../recipe.service";
 
 @Component({
   selector: 'app-recipe-item',
@@ -13,14 +14,15 @@ import {Recipe} from "../../recipe.model";
   styleUrl: './recipe-item.component.css'
 })
 export class RecipeItemComponent {
-  @Input('recipe') recipe: Recipe | null;
-  @Output() recipeSelected = new EventEmitter<void>()
+  @Input('recipe') recipe!: Recipe;
+  // @Output() recipeSelected = new EventEmitter<void>()
 
-  constructor() {
-    this.recipe = null;
+  constructor(private recipeService: RecipeService) {
+    // this.recipe = null;
   }
 
    onSelected(){
-    this.recipeSelected.emit();
+    this.recipeService.recipeSelected.emit(this.recipe)
+    // this.recipeSelected.emit();
    }
 }
