@@ -1,0 +1,15 @@
+<nav class="d-flex justify-content-center py-3 gap-5">
+  <div class="nav-item"><a href="#" class="nav-link" (click)="onSelect('recipe')">Recipes</a></div>
+  <div class="nav-item"><a href="#" class="nav-link" (click)="onSelect('shopping-list')">Shopping List</a></div>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a appDropdown="show" targetElementId="header-menu"  href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Manage</a>
+          <ul [ngStyle]="{'position':'absolute', 'top':'40px'}" id="header-menu" class="dropdown-menu">
+            <li><a href="#" class="dropdown-item">Save Data</a></li>
+            <li><a href="#" class="dropdown-item">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+
+</nav>

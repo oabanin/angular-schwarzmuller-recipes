@@ -1,0 +1,13 @@
+<div [ngStyle]="{background:'gray'}">
+  Recipes component
+
+      <app-recipe-list (recipeSelected)="recipeSelected = $event"></app-recipe-list>
+      <app-recipe-detail
+        *ngIf="recipeSelected; else infoText"
+        [recipe]="recipeSelected"
+      ></app-recipe-detail>
+      <ng-template #infoText>
+        <p>Please select a recipe</p>
+      </ng-template>
+
+</div>

@@ -1,0 +1,43 @@
+<div [ngStyle]="{'background':'pink'}">
+  RECIPE DETAIL
+  <div class="row">
+    <div class="col-12">
+      <img [src]="recipe?.imagePath" alt="{{recipe?.name}}" class="img-fluid">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h1>{{recipe?.name}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="btn-group">
+        <button
+          appDropdown = "show"
+          [targetElementId]="'dropdown-menu'"
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Manage Recipe 12
+        </button>
+        <ul [ngStyle]="{'position':'absolute', 'top':'40px'}" id="dropdown-menu" class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">To Shopping List</a></li>
+          <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
+          <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      {{recipe?.description}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      Ingredients
+    </div>
+  </div>
+</div>

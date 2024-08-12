@@ -1,0 +1,17 @@
+<a
+  href="#"
+  (click)="onSelected()"
+  class="link-underline bg-black">
+
+    <h4 class="list-group-item-heading">{{ recipe?.name }}</h4>
+    <p class="list-group-item-text">{{ recipe?.description }}</p>
+
+
+    <img
+      [ngSrc]="recipe?.imagePath || ''"
+      width="auto"
+      height="auto"
+      alt="{{ recipe?.name }}"
+      class="img-fluid"/>
+
+</a>
