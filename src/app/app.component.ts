@@ -6,13 +6,15 @@ import {ShoppingListComponent} from "./shopping-list/shopping-list.component";
 import {HeaderComponent} from "./header/header.component";
 import {NgIf} from "@angular/common";
 import {RecipeDetailComponent} from "./recipes/recipe-detail/recipe-detail.component";
+import {ShoppingListService} from "./shopping-list/shopping-list.service";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NgbInputDatepicker, RecipesComponent, ShoppingListComponent, HeaderComponent, NgIf, RecipeDetailComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers:[ShoppingListService]
 })
 export class AppComponent {
   title = 'angular-shwarzmuller2';

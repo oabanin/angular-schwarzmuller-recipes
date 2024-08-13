@@ -18,7 +18,7 @@ import {RecipeService} from "../recipe.service";
   styleUrl: './recipe-list.component.css'
 })
 export class RecipeListComponent {
-  recipes: Recipe[] = new RecipeService().getRecipes()
+  recipes: Recipe[] =[]
 
   constructor(private recipeService:RecipeService) {
 
