@@ -23,7 +23,7 @@
           Manage Recipe 12
         </button>
         <ul [ngStyle]="{'position':'absolute', 'top':'40px'}" id="dropdown-menu" class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">To Shopping List</a></li>
+          <li><a (click)="onAddToShoppingList()" class="dropdown-item">To Shopping List</a></li>
           <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
           <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
         </ul>

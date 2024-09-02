@@ -1,8 +1,8 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {NgStyle} from "@angular/common";
 import {Recipe} from "../recipe.model";
-import {reduce} from "rxjs";
 import {DropdownDirective} from "../../shared/dropdown.directive";
+import {RecipeService} from "../recipe.service";
 
 @Component({
   selector: 'app-recipe-detail',
@@ -14,10 +14,19 @@ import {DropdownDirective} from "../../shared/dropdown.directive";
   templateUrl: './recipe-detail.component.html',
   styleUrl: './recipe-detail.component.css'
 })
-export class RecipeDetailComponent {
+export class RecipeDetailComponent implements OnInit {
   @Input('recipe') recipe: Recipe | null;
-constructor( ) {
-  this.recipe = null;
-}
+
+  constructor(private recipeService: RecipeService) {
+    this.recipe = null;
+  }
+
+  ngOnInit() {
+  }
+
+  onAddToShoppingList() {
+    if (!this.recipe?.ingredients) return;
+    this.recipeService.addIngridientsToShoppingList(this.recipe.ingredients)
+  }
 
 }
