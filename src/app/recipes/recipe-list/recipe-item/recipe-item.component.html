@@ -1,16 +1,15 @@
 <a
-  href="#"
-  (click)="onSelected()"
-  class="link-underline bg-black">
+  [routerLink]="[index]"
+  class="link-underline ">
 
-    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <h4 [routerLinkActive]="'bg-danger'" class="list-group-item-heading">{{ recipe.name }}</h4>
     <p class="list-group-item-text">{{ recipe.description }}</p>
 
 
     <img
       [ngSrc]="recipe.imagePath || ''"
-      width="auto"
-      height="auto"
+      width="100"
+      height="100"
       alt="{{ recipe.name }}"
       class="img-fluid"/>
 

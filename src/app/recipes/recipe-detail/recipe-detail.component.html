@@ -2,7 +2,7 @@
   RECIPE DETAIL
   <div class="row">
     <div class="col-12">
-      <img [src]="recipe?.imagePath" alt="{{recipe?.name}}" class="img-fluid">
+      <img  width="200" height="200" [src]="recipe?.imagePath" alt="{{recipe?.name}}" class="img-fluid">
     </div>
   </div>
   <div class="row">
@@ -24,8 +24,8 @@
         </button>
         <ul [ngStyle]="{'position':'absolute', 'top':'40px'}" id="dropdown-menu" class="dropdown-menu">
           <li><a (click)="onAddToShoppingList()" class="dropdown-item">To Shopping List</a></li>
-          <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
-          <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+          <li><a (click)="onEditRecipe()" class="dropdown-item">Edit Recipe</a></li>
+          <li><a class="dropdown-item">Delete Recipe</a></li>
         </ul>
       </div>
     </div>

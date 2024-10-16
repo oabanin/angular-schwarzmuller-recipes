@@ -1,13 +1,19 @@
-<div [ngStyle]="{background:'gray'}">
-  Recipes component
+<div [ngStyle]="{background:'gray', padding: '10px'}">
 
-      <app-recipe-list></app-recipe-list>
-      <app-recipe-detail
-        *ngIf="recipeSelected; else infoText"
-        [recipe]="recipeSelected"
-      ></app-recipe-detail>
-      <ng-template #infoText>
-        <p>Please select a recipe</p>
-      </ng-template>
+  <div [ngStyle]="{display:'flex'}">
+    <app-recipe-list/>
+    <router-outlet/>
+
+<!--    <app-recipe-detail-->
+<!--      *ngIf="recipeSelected; else infoText"-->
+<!--      [recipe]="recipeSelected"-->
+<!--    ></app-recipe-detail>-->
+<!--    <ng-template #infoText>-->
+<!--      <p>Please select a recipe</p>-->
+<!--    </ng-template>-->
+  </div>
+
+
+
 
 </div>
