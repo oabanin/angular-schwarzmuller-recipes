@@ -17,16 +17,16 @@ import {ShoppingListService} from "./shopping-list/shopping-list.service";
   providers:[ShoppingListService]
 })
 export class AppComponent {
-  title = 'angular-shwarzmuller2';
-  loadedFeature = 'recipe'
-  constructor(private modalService: NgbModal) {
-  }
-
-  public open(modal: any): void {
-    this.modalService.open(modal);
-  }
-
-  onNavigate(feature:string){
-    this.loadedFeature = feature;
-  }
+  // title = 'angular-shwarzmuller2';
+  // loadedFeature = 'recipe'
+  // constructor(private modalService: NgbModal) {
+  // }
+  //
+  // public open(modal: any): void {
+  //   this.modalService.open(modal);
+  // }
+  //
+  // onNavigate(feature:string){
+  //   this.loadedFeature = feature;
+  // }
 }

@@ -24,9 +24,9 @@ export class RecipesComponent {
   recipeSelected: Recipe | null = null; // Initialize with null or an initial recipe
 
   constructor(private recipeService:RecipeService) {
-    this.recipeService.recipeSelected.subscribe((recipe)=>{
-      this.recipeSelected = recipe
-    })
+    // this.recipeService.recipeSelected.subscribe((recipe)=>{
+    //   this.recipeSelected = recipe
+    // })
 
   }
 }
